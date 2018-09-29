@@ -46,7 +46,7 @@
     
     <title>
         
-            归档: 2018 | 
+            使用nmap网络嗅探 | 
         
         Jam Yip
     </title>
@@ -213,7 +213,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Jam Yip">
-    <meta name="msapplication-starturl" content="https://jamyip.github.io/archives/2018/">
+    <meta name="msapplication-starturl" content="https://jamyip.github.io/2018/09/29/使用nmap网络嗅探/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Jam Yip">
@@ -228,13 +228,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://jamyip.github.io/archives/2018/">
+    <meta property="og:url" content="https://jamyip.github.io/2018/09/29/使用nmap网络嗅探/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="归档: 2018 | Jam Yip">
+    <meta property="og:title" content="使用nmap网络嗅探 | Jam Yip">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
     
 
+    
+        <meta property="article:published_time" content="Sat Sep 29 2018 21:16:53 GMT+0800">
+        <meta property="article:modified_time" content="Sat Sep 29 2018 21:28:53 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -242,13 +245,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://jamyip.github.io/archives/2018/index.html" />
+        <link rel="canonical" href="https://jamyip.github.io/2018/09/29/使用nmap网络嗅探/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://jamyip.github.io/2018/09/29/使用nmap网络嗅探/index.html",
+    "headline": "使用nmap网络嗅探",
+    "datePublished": "Sat Sep 29 2018 21:16:53 GMT+0800",
+    "dateModified": "Sat Sep 29 2018 21:28:53 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Jam Yip",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Follow your heart"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Jam Yip",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "",
+    "description": "",
+}
+</script>
 
 
     
@@ -282,262 +315,213 @@
                         </button>
                     
 
-                    <!-- Index Module -->
-<div class="material-index mdl-grid">
-    
-    <div class="locate-thumbnail-symbol"></div>
+                    <!-- Post TOC -->
 
-    <!-- Pin on top -->
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#端口扫描"><span class="post-toc-number">1.</span> <span class="post-toc-text">端口扫描</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#服务和版本探测"><span class="post-toc-number">2.</span> <span class="post-toc-text">服务和版本探测</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#操作系统探测"><span class="post-toc-number">3.</span> <span class="post-toc-text">操作系统探测</span></a></li></ol>
+    </ul>
     
 
-    <!-- Normal Post -->
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
     
         
             <!-- Random Thumbnail -->
             <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/09/29/使用nmap网络嗅探/">使用nmap网络嗅探</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            建议阅读官方man page：
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/09/29/使用nmap网络嗅探/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Jam Yip's avatar">
-            </div>
-            <div>
-                <strong>Jam Yip</strong>
-                <span>9月 29, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/09/29/hping安装-Ubuntu/">hping安装(Ubuntu)</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            环境：Ubuntu 12.04.5
-
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/09/29/hping安装-Ubuntu/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Jam Yip's avatar">
-            </div>
-            <div>
-                <strong>Jam Yip</strong>
-                <span>9月 29, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/09/27/DoS/">DoS</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            DoSDen...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/09/27/DoS/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Jam Yip's avatar">
-            </div>
-            <div>
-                <strong>Jam Yip</strong>
-                <span>9月 27, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-        
-            
-                <!-- Paradox Thumbnail -->
-                <div class="post_entry-module mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col fade out">
-    <!-- Post Thumbnail -->
-    
-        
-            <!-- Random Thumbnail -->
-            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-        
-    
-
-        <!-- Post Title -->
-        <p class="article-headline-p"><a href="/2018/09/27/hello-world/">Hello World</a></p>
-    </div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            Welcome to Hexo
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2018/09/27/hello-world/" target="_self">阅读全文</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="Jam Yip's avatar">
-            </div>
-            <div>
-                <strong>Jam Yip</strong>
-                <span>9月 27, 2018</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-          
-
-            
-
-            
-
-            <!-- Post Views -->
-            <span class="post_entry-views">
-            </span>
-        </div>
-    </div>
-</div>
-
-            
-            
-        
-    
-
-    
-
-    
-        <script type="text/ls-javascript" id="thumbnail-script">
-    var randomNum;
-
-    var locatePost = $('.locate-thumbnail-symbol').next();
-    for(var i = 0; i < 10; i++) {
-        randomNum = Math.floor(Math.random() * 19 + 1);
-
-        locatePost.children('.post_thumbnail-random').attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
     $('.post_thumbnail-random').addClass('lazy');
-
-        locatePost = locatePost.next();
-    }
 </script>
 
+        
+    
+            <p class="article-headline-p">
+                使用nmap网络嗅探
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Jam Yip</strong>
+        <span>9月 29, 2018</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="https://pan.baidu.com/share/qrcode?w=246&h=246&url=https://jamyip.github.io/2018/09/29/使用nmap网络嗅探/">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=使用nmap网络嗅探&url=https://jamyip.github.io/2018/09/29/使用nmap网络嗅探/index.html&pic=https://jamyip.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://jamyip.github.io/2018/09/29/使用nmap网络嗅探/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
     
 </div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>建议阅读官方man page：<a href="https://nmap.org/man/zh/" target="_blank" rel="noopener">https://nmap.org/man/zh/</a></p>
+<h2 id="端口扫描"><a href="#端口扫描" class="headerlink" title="端口扫描"></a>端口扫描</h2><p><em>-F</em> ：快速扫描，默认的扫描方式是TCP SYN扫描。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">jam@ubuntu:~$ nmap -F js.ntwikis.com</span><br><span class="line"></span><br><span class="line">Starting Nmap 7.60 ( https://nmap.org ) at 2018-09-29 05:52 PDT</span><br><span class="line">Nmap scan report for js.ntwikis.com (114.215.136.175)</span><br><span class="line">Host is up (1.00s latency).</span><br><span class="line">Not shown: 90 closed ports</span><br><span class="line">PORT     STATE    SERVICE</span><br><span class="line">21/tcp   open     ftp</span><br><span class="line">80/tcp   open     http</span><br><span class="line">135/tcp  filtered msrpc</span><br><span class="line">139/tcp  filtered netbios-ssn</span><br><span class="line">445/tcp  filtered microsoft-ds</span><br><span class="line">514/tcp  filtered shell</span><br><span class="line">1027/tcp filtered IIS</span><br><span class="line">1028/tcp filtered unknown</span><br><span class="line">3128/tcp filtered squid-http</span><br><span class="line">3306/tcp open     mysql</span><br><span class="line"></span><br><span class="line">Nmap done: 1 IP address (1 host up) scanned in 21.33 seconds</span><br></pre></td></tr></table></figure></p>
+<h2 id="服务和版本探测"><a href="#服务和版本探测" class="headerlink" title="服务和版本探测"></a>服务和版本探测</h2><p><em>-sV</em> ：启动服务版本探测<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">jam@ubuntu:~$ nmap -sV -p 80 js.ntwikis.com</span><br><span class="line"></span><br><span class="line">Starting Nmap 7.60 ( https://nmap.org ) at 2018-09-29 05:53 PDT</span><br><span class="line">Nmap scan report for js.ntwikis.com (114.215.136.175)</span><br><span class="line">Host is up (0.053s latency).</span><br><span class="line"></span><br><span class="line">PORT   STATE SERVICE VERSION</span><br><span class="line">80/tcp open  http    nginx</span><br><span class="line"></span><br><span class="line">Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .</span><br><span class="line">Nmap done: 1 IP address (1 host up) scanned in 8.96 seconds</span><br></pre></td></tr></table></figure></p>
+<h2 id="操作系统探测"><a href="#操作系统探测" class="headerlink" title="操作系统探测"></a>操作系统探测</h2><p><em>-O</em>： 启用操作系统检测<br>最终会根据可能性，依次列出可能的操作系统。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">jam@ubuntu:~$ sudo nmap -O js.ntwikis.com</span><br><span class="line">[sudo] password for jam: </span><br><span class="line"></span><br><span class="line">Starting Nmap 7.60 ( https://nmap.org ) at 2018-09-29 06:08 PDT</span><br><span class="line">Nmap scan report for js.ntwikis.com (114.215.136.175)</span><br><span class="line">Host is up (0.094s latency).</span><br><span class="line">Not shown: 985 closed ports</span><br><span class="line">PORT     STATE    SERVICE</span><br><span class="line">21/tcp   open     ftp</span><br><span class="line">42/tcp   filtered nameserver</span><br><span class="line">80/tcp   open     http</span><br><span class="line">135/tcp  filtered msrpc</span><br><span class="line">139/tcp  filtered netbios-ssn</span><br><span class="line">445/tcp  filtered microsoft-ds</span><br><span class="line">514/tcp  filtered shell</span><br><span class="line">593/tcp  filtered http-rpc-epmap</span><br><span class="line">1027/tcp filtered IIS</span><br><span class="line">1028/tcp filtered unknown</span><br><span class="line">1068/tcp filtered instl_bootc</span><br><span class="line">3128/tcp filtered squid-http</span><br><span class="line">3306/tcp open     mysql</span><br><span class="line">4444/tcp filtered krb524</span><br><span class="line">6669/tcp filtered irc</span><br><span class="line">Aggressive OS guesses: Actiontec MI424WR-GEN3I WAP (99%), DD-WRT v24-sp2 (Linux 2.4.37) (98%), Linux 3.2 (98%), Microsoft Windows XP SP3 or Windows 7 or Windows Server 2012 (96%), Linux 4.4 (96%), Microsoft Windows XP SP3 (96%), BlueArc Titan 2100 NAS device (91%)</span><br><span class="line">No exact OS matches for host (test conditions non-ideal).</span><br><span class="line"></span><br><span class="line">OS detection performed. Please report any incorrect results at https://nmap.org/submit/ .</span><br><span class="line">Nmap done: 1 IP address (1 host up) scanned in 130.82 seconds</span><br></pre></td></tr></table></figure></p>
+
+        
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2018/09/29/hping安装-Ubuntu/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
 
 
                     
