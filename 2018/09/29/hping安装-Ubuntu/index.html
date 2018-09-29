@@ -46,7 +46,7 @@
     
     <title>
         
-            About Me | 
+            hping安装(Ubuntu) | 
         
         Jam Yip
     </title>
@@ -213,7 +213,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Jam Yip">
-    <meta name="msapplication-starturl" content="https://jamyip.github.io/about/">
+    <meta name="msapplication-starturl" content="https://jamyip.github.io/2018/09/29/hping安装-Ubuntu/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="Jam Yip">
@@ -228,13 +228,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="https://jamyip.github.io/about/">
+    <meta property="og:url" content="https://jamyip.github.io/2018/09/29/hping安装-Ubuntu/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="About Me | Jam Yip">
+    <meta property="og:title" content="hping安装(Ubuntu) | Jam Yip">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="">
     
 
+    
+        <meta property="article:published_time" content="Sat Sep 29 2018 19:23:40 GMT+0800">
+        <meta property="article:modified_time" content="Sat Sep 29 2018 19:29:15 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -242,13 +245,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="https://jamyip.github.io/about/index.html" />
+        <link rel="canonical" href="https://jamyip.github.io/2018/09/29/hping安装-Ubuntu/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "https://jamyip.github.io/2018/09/29/hping安装-Ubuntu/index.html",
+    "headline": "hping安装(Ubuntu)",
+    "datePublished": "Sat Sep 29 2018 19:23:40 GMT+0800",
+    "dateModified": "Sat Sep 29 2018 19:29:15 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "Jam Yip",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "Follow your heart"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Jam Yip",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": "",
+    "description": "",
+}
+</script>
 
 
     
@@ -284,6 +317,39 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装依赖"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装依赖</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#libpcap-devel安装"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">libpcap-devel安装</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#tcl-devel安装"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">tcl-devel安装</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#拉取源码"><span class="post-toc-number">2.</span> <span class="post-toc-text">拉取源码</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#跳转目录"><span class="post-toc-number">3.</span> <span class="post-toc-text">跳转目录</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置编译环境"><span class="post-toc-number">4.</span> <span class="post-toc-text">配置编译环境</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#编译"><span class="post-toc-number">5.</span> <span class="post-toc-text">编译</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装"><span class="post-toc-number">6.</span> <span class="post-toc-text">安装</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#运行"><span class="post-toc-number">7.</span> <span class="post-toc-text">运行</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装过程遇到的问题"><span class="post-toc-number">8.</span> <span class="post-toc-text">安装过程遇到的问题</span></a></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
@@ -310,7 +376,7 @@
         
     
             <p class="article-headline-p">
-                About Me
+                hping安装(Ubuntu)
             </p>
         </div>
 
@@ -329,7 +395,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Jam Yip</strong>
-        <span>9月 27, 2018</span>
+        <span>9月 29, 2018</span>
     </div>
 
     <div class="section-spacer"></div>
@@ -351,7 +417,7 @@
 <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
     <li class="mdl-menu__item">在其它设备中阅读本文章</li>
     
-        <img src="https://pan.baidu.com/share/qrcode?w=246&h=246&url=https://jamyip.github.io/about/index.html">
+        <img src="https://pan.baidu.com/share/qrcode?w=246&h=246&url=https://jamyip.github.io/2018/09/29/hping安装-Ubuntu/">
     
 </ul>
 
@@ -373,7 +439,7 @@
 
     <!-- Share Weibo -->
     
-        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=About Me&url=https://jamyip.github.io/about/index.html&pic=https://jamyip.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=hping安装(Ubuntu)&url=https://jamyip.github.io/2018/09/29/hping安装-Ubuntu/index.html&pic=https://jamyip.github.io/img/favicon.png&searchPic=false&style=simple" target="_blank">
             <li class="mdl-menu__item">
                 分享到微博
             </li>
@@ -385,7 +451,7 @@
 
     <!-- Share Facebook -->
     
-        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://jamyip.github.io/about/index.html" target="_blank">
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://jamyip.github.io/2018/09/29/hping安装-Ubuntu/index.html" target="_blank">
             <li class="mdl-menu__item">
                 分享到 Facebook
             </li>
@@ -413,7 +479,28 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>About me? Nothing</p>
+        <p>环境：Ubuntu 12.04.5</p>
+<h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><p>hping依赖libpcap-devel、tcl-devel，请先安装这两个库。</p>
+<h3 id="libpcap-devel安装"><a href="#libpcap-devel安装" class="headerlink" title="libpcap-devel安装"></a>libpcap-devel安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/the-tcpdump-group/libpcap.git</span><br><span class="line">$ <span class="built_in">cd</span> libpcap</span><br><span class="line">$ ./configure</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+<h3 id="tcl-devel安装"><a href="#tcl-devel安装" class="headerlink" title="tcl-devel安装"></a>tcl-devel安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/tcltk/tcl.git</span><br><span class="line">$ <span class="built_in">cd</span> tcl/unix</span><br><span class="line">$ ./configure</span><br><span class="line">$ make</span><br><span class="line">$ sudo make install</span><br></pre></td></tr></table></figure>
+<h2 id="拉取源码"><a href="#拉取源码" class="headerlink" title="拉取源码"></a>拉取源码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/antirez/hping.git</span><br></pre></td></tr></table></figure>
+<h2 id="跳转目录"><a href="#跳转目录" class="headerlink" title="跳转目录"></a>跳转目录</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> hping</span><br></pre></td></tr></table></figure>
+<h2 id="配置编译环境"><a href="#配置编译环境" class="headerlink" title="配置编译环境"></a>配置编译环境</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./configure</span><br></pre></td></tr></table></figure>
+<h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ make</span><br></pre></td></tr></table></figure>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ make install</span><br></pre></td></tr></table></figure>
+<h2 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h2><p>查看版本号<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mobile@mobile-ubuntu:~/hping$ hping -v</span><br><span class="line">hping version 3.0.0-alpha-1 ($Id: release.h,v 1.4 2004/04/09 23:38:56 antirez Exp $)</span><br></pre></td></tr></table></figure></p>
+<h2 id="安装过程遇到的问题"><a href="#安装过程遇到的问题" class="headerlink" title="安装过程遇到的问题"></a>安装过程遇到的问题</h2><p><strong>问题1</strong>：编译时报错，<code>fatal error: pcap.h: No such file or directory</code></p>
+<p>解决：安装libpcap<br><br><br></p>
+<p><strong>问题2</strong>：编译时报错，<code>libpcap_stuff.c:19:21: fatal error: net/bpf.h: No such file or directory</code></p>
+<p>解决：<br>libpcap安装在/usr/local/include目录下而编译hping时，会去/usr/include目录下查找有没有net/bpf.h这个文件。因此需要将/usr/local/include/pcap-bdf.h链接到/usr/include/net/目录底下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo ln -sf /usr/<span class="built_in">local</span>/include/pcap-bdf.h /usr/include/net/bpf.h</span><br></pre></td></tr></table></figure></p>
+<p><br><br></p>
+<p><strong>问题3</strong>：编译时报错，<code>/usr/bin/ld: cannot find -ltcl</code></p>
+<p>解决：安装tcl<br><br><br></p>
+<p><strong>问题4</strong>：编译时报错，<code>error while loading shared libraries: libpcap.so.1: cannot open shared object file: No such file or directory</code></p>
+<p>解决：<br>先找到libpcap.so.1的位置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mobile@mobile-ubuntu:/lib$ locate libpcap.so.1</span><br><span class="line">/usr/lib/x86_64-linux-gnu/libpcap.so.1.1.1</span><br></pre></td></tr></table></figure></p>
+<p>用管理员权限编辑/etc/ld.so.conf，在文件末尾新增一行加上libpcap.so的路径，保存<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/ld.so.conf</span><br></pre></td></tr></table></figure></p>
+<p>ld.so.conf内容如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">include /etc/ld.so.conf.d/*.conf</span><br><span class="line">/usr/lib/x86_64-linux-gnu/</span><br></pre></td></tr></table></figure></p>
+<p>执行ldconfig，使设置生效<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo ldconfig</span><br></pre></td></tr></table></figure></p>
 
         
     
@@ -439,6 +526,14 @@
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
+    
+        <a href="/2018/09/27/DoS/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
     
 </nav>
 
@@ -617,6 +712,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
